@@ -1,29 +1,85 @@
 import 'package:flutter/material.dart';
+// Write basic structure of flutter code.
 
 void main() {
-  //1.runApp - used to run application on the screen.
   runApp(
-    //2. MaterialApp : used to built in ui of material design
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      //3. Safearea : to create ui in safearea of the mobile
       home: SafeArea(
         child: Scaffold(
+          backgroundColor: Colors.black,
           appBar: AppBar(
+            leading: Icon(
+              Icons.menu,
+              color: Colors.white,
+            ),
             backgroundColor: Colors.red,
-            leading: Icon(Icons.menu),
-            title: Text("Flutter App"),
-            centerTitle: true,
           ),
-          body: const Center(
-            child: Text(
-              "Red & White Group Of Institutes",
-              style: TextStyle(
-                color: Colors.red,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                wordSpacing: 5,
-                letterSpacing: 5,
+          body: Center(
+            child: RichText(
+              text: const TextSpan(
+                children: [
+                  //G
+                  TextSpan(
+                    text: "        G",
+                    style: TextStyle(
+                      color: Colors.green,
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600,
+                      letterSpacing: 1,
+                    ),
+                  ),
+                  //R
+                  TextSpan(
+                    text: "R",
+                    style: TextStyle(
+                      letterSpacing: 1,
+                        color: Colors.red,
+                        fontSize: 35,
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  //APHICS
+                  TextSpan(
+                    text: "APHICS",
+                    style: TextStyle(
+                      letterSpacing: 1,
+                        color: Colors.green,
+                        fontSize: 25,
+                        fontWeight: FontWeight.w600
+                    ),
+                  ),
+                  //FLUTT
+                  TextSpan(
+                    text: "\nFLUTT",
+                    style: TextStyle(
+                      letterSpacing: 1,
+                        color: Colors.blue,
+                        fontSize: 25,
+                        fontWeight: FontWeight.w600
+                    ),
+                  ),
+                  //E
+                  TextSpan(
+                    text: "E",
+                    style: TextStyle(
+                      letterSpacing: 1,
+                        color: Colors.red,
+                        fontSize: 35,
+                        fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  //R
+                  TextSpan(
+                    text: "R",
+                    style: TextStyle(
+                      letterSpacing: 1,
+                        color: Colors.blue,
+                        fontSize: 25,
+                        fontWeight: FontWeight.w600
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
